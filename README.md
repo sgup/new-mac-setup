@@ -1,5 +1,4 @@
-# new-mac-setup
-Shridhar's Macbook setup.
+# 💻 Shridhar's Macbook setup.
 
 ## Dev Stuff:
 
