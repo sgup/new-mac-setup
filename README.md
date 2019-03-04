@@ -1,5 +1,5 @@
 # new-mac-setup
-Shridhar's mac dev setup.
+Shridhar's Macbook setup.
 
 ## Dev Stuff:
 
@@ -10,7 +10,7 @@ Shridhar's mac dev setup.
 5. Yarn: `brew install yarn`
 6. `brew install python3`
 
-### Git 
+### :octocat: Git 
 
 ```
 git config --global user.email "shri90@gmail.com"
