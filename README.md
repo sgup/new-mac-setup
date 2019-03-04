@@ -27,7 +27,7 @@ git config --global alias.s status
 ### Sublime Packages
 
 Link `subl`:
-`ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl`
+`ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 
 - SideBarEnhancements
 - BracketHighlighter
