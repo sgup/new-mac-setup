@@ -10,6 +10,10 @@ Shridhar's Macbook setup.
 5. Yarn: `brew install yarn`
 6. `brew install python3`
 
+### Terminal
+
+https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
+
 ### :octocat: Git 
 
 ```
