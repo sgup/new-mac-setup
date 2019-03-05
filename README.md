@@ -42,6 +42,7 @@ Link `subl`:
 - A File Icon
 - JSX
 - Sass
+- Colorsublime
 
 ## Productivity Apps:
 
