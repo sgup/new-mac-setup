@@ -35,6 +35,8 @@ Link `subl`:
 - SideBarEnhancements
 - BracketHighlighter
 - SublimeLinter
+  `npm install -g eslint`
+- SublimeLinter-eslint
 - SublimeCodeIntel (`pip3 install --upgrade --pre CodeIntel`)
 - GitGutter
 - JSX
