@@ -39,6 +39,7 @@ Link `subl`:
 - SublimeLinter-eslint
 - SublimeCodeIntel (`pip3 install --upgrade --pre CodeIntel`)
 - GitGutter
+- A File Icon
 - JSX
 - Sass
 
