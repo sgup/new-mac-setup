@@ -1,0 +1,41 @@
+{
+	"binary_file_patterns":
+	[
+		"*/tmp/*",
+		"*/node_modules/*",
+		"*/dist/*",
+		"*yarn*",
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
+	],
+	"color_scheme": "Packages/Colorsublime - Themes/wild-cherry.tmTheme",
+	"font_face": "Hack",
+	"font_size": 15,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"predawn_sidebar_arrows": false,
+	"predawn_sidebar_large": false,
+	"predawn_sidebar_medium": false,
+	"predawn_sidebar_narrow": false,
+	"predawn_sidebar_small": false,
+	"predawn_sidebar_xlarge": false,
+	"predawn_sidebar_xsmall": false,
+	"show_encoding": true,
+	"show_full_path": true,
+	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
