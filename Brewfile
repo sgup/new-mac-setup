@@ -54,6 +54,13 @@ cask "ngrok"               # local tunnel
 cask "tailscale-app"       # mesh VPN
 cask "zulu@17"             # JDK 17 for Android builds
 
+# Apps
+cask "zed"                 # editor (used by EDITOR/VISUAL in .zshrc)
+cask "helium-browser"      # Chromium-based browser focused on speed + privacy
+cask "mimestream"          # native macOS Gmail client
+cask "signal"              # encrypted messaging
+cask "spotify"             # music
+
 # ============================================================================
 # Mac App Store
 # ============================================================================

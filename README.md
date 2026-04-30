@@ -72,7 +72,14 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 **Apps (Mac App Store + casks)**
 - **Productivity** — [Things](https://culturedcode.com/things/) (todo), [Bear](https://bear.app/) (notes), [DaisyDisk](https://daisydiskapp.com/) (disk usage), [Wipr](https://kagi.com/orion) (Safari content blocker), [Dark Reader for Safari](https://darkreader.org/), [Perplexity](https://www.perplexity.ai/).
 - **Apple suite** — Keynote, Numbers, Pages, iMovie, GarageBand, Final Cut Pro, Xcode.
+- **Communication** — [Signal](https://signal.org/), [Mimestream](https://mimestream.com/) (native Gmail client).
+- **Browsers** — [Helium](https://helium.computer/) (Chromium, privacy-focused).
+- **Editor** — [Zed](https://zed.dev/) (used by `EDITOR`/`VISUAL` in `.zshrc`).
+- **Media** — [Spotify](https://www.spotify.com/).
 - **Network / dev** — [Tailscale](https://tailscale.com/) (mesh VPN), [ngrok](https://ngrok.com/) (local tunnel).
+
+**Manual installs (no Homebrew package)**
+- [Astro](https://astro.app/) — App Store Optimization (ASO) tool. Download from the website.
 
 **Mobile / AI tooling (installed by `install.sh`, not Homebrew)**
 - [Claude Code](https://claude.com/claude-code) — Anthropic's native installer
