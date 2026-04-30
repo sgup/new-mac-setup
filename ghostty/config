@@ -1,0 +1,66 @@
+# Ghostty config
+# Docs: https://ghostty.org/docs/config
+# `ghostty +show-config --default --docs` to see every option.
+
+# --- Font --------------------------------------------------------------------
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12
+# Thicker stroke — fixes the "too thin" look on retina displays.
+font-thicken = true
+
+# --- Rendering ---------------------------------------------------------------
+# Eliminates the dark fringes around text edges (esp. red-on-green).
+alpha-blending = linear-corrected
+
+# --- Theme -------------------------------------------------------------------
+theme = 0x96f
+# Alternative: follow macOS light/dark mode
+# theme = dark:Rose Pine Moon,light:Rose Pine Dawn
+
+# --- Window ------------------------------------------------------------------
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+# Extend cell background color into the padding area — cleaner look on themes
+# with non-default cell backgrounds (e.g. tmux status lines, vim splits).
+window-padding-color = extend
+background-opacity = 0.96
+background-blur = 20
+
+# Restore tabs/splits/working dirs when Ghostty restarts.
+window-save-state = always
+
+# --- macOS -------------------------------------------------------------------
+macos-titlebar-style = transparent
+macos-option-as-alt = true
+macos-icon = "xray"
+quit-after-last-window-closed = true
+
+# --- Cursor ------------------------------------------------------------------
+cursor-style = bar
+cursor-style-blink = false
+
+# --- Mouse -------------------------------------------------------------------
+mouse-hide-while-typing = true
+
+# --- Notifications -----------------------------------------------------------
+# Bounce the dock + notification when a >30s command finishes in an unfocused
+# tab. Great for long builds, deploys, etc.
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = bell,notify
+notify-on-command-finish-after = 30s
+
+# --- Scrollback / shell ------------------------------------------------------
+scrollback-limit = 100000000
+# title: Ghostty sets the window/tab title (replaces the precmd hack)
+# path:  ensures the `ghostty` CLI is on PATH even if init scripts reset it
+# ssh-env / ssh-terminfo: keep colors + arrow keys working on remote shells
+shell-integration-features = cursor,sudo,title,path,ssh-env,ssh-terminfo
+
+# --- Keybindings -------------------------------------------------------------
+# Send a literal newline on shift+enter (handy for AI prompts)
+keybind = shift+enter=text:\n
+# Cmd+K clears scrollback (iTerm/Terminal.app convention)
+keybind = super+k=clear_screen
+# Cmd+Shift+. toggles the quick terminal (slide-down, system-wide)
+keybind = global:super+shift+period=toggle_quick_terminal
