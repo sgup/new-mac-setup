@@ -69,6 +69,11 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 - `cocoapods`, `ruby@3.3`, `watchman`, `xcodegen` for React Native + iOS builds.
 - `flyctl` for Fly.io deploys, `libpq` for `psql`/`pg_dump`, `zulu@17` JDK for Android.
 
+**Apps (Mac App Store + casks)**
+- **Productivity** — [Things](https://culturedcode.com/things/) (todo), [Bear](https://bear.app/) (notes), [DaisyDisk](https://daisydiskapp.com/) (disk usage), [Wipr](https://kagi.com/orion) (Safari content blocker), [Dark Reader for Safari](https://darkreader.org/), [Perplexity](https://www.perplexity.ai/).
+- **Apple suite** — Keynote, Numbers, Pages, iMovie, GarageBand, Final Cut Pro, Xcode.
+- **Network / dev** — [Tailscale](https://tailscale.com/) (mesh VPN), [ngrok](https://ngrok.com/) (local tunnel).
+
 ## Brewfile philosophy
 
 The Brewfile is **curated, not auto-dumped**. It captures the dev tools and apps
