@@ -12,13 +12,17 @@ Dotfiles + brew bundle for setting up a fresh macOS machine.
 git clone https://github.com/sgup/new-mac-setup.git ~/.dotfiles
 cd ~/.dotfiles
 
-# 3. Install everything from the Brewfile (formulae + casks)
+# 3. Sign into the Mac App Store via the GUI (`open -a "App Store"`).
+#    Required for the `mas` entries in the Brewfile — Apple no longer
+#    supports `mas signin` from the CLI.
+
+# 4. Install everything from the Brewfile (formulae + casks + MAS apps)
 brew bundle install
 
-# 4. Symlink the dotfiles into $HOME (and Ghostty config into its app dir)
+# 5. Symlink the dotfiles into $HOME (and Ghostty config into its app dir)
 ./install.sh
 
-# 5. Apply macOS preference tweaks
+# 6. Apply macOS preference tweaks
 ./macos/defaults.sh
 ```
 
@@ -61,22 +65,41 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 - `gh` for GitHub workflows.
 - `httpie`, `jq`, `glow`, `tlrc` (tldr).
 
+**Mobile / backend**
+- `cocoapods`, `ruby@3.3`, `watchman`, `xcodegen` for React Native + iOS builds.
+- `flyctl` for Fly.io deploys, `libpq` for `psql`/`pg_dump`, `zulu@17` JDK for Android.
+
+## Brewfile philosophy
+
+The Brewfile is **curated, not auto-dumped**. It captures the dev tools and apps
+needed for a productive day-one setup — not every CLI ever experimented with.
+
+If you `brew install` something new and decide it earns a permanent spot, add it
+to the Brewfile by hand. Don't run `brew bundle dump --force` on this repo — it
+will re-add every transient tool currently installed and undo the curation.
+
+To check what's installed locally but missing from the Brewfile:
+
+```bash
+brew bundle check --verbose                     # list anything missing
+brew leaves | sort > /tmp/installed.txt         # explicitly-installed formulae
+grep -oE '^brew "[^"]+"' Brewfile | sort > /tmp/in-brewfile.txt
+diff /tmp/installed.txt /tmp/in-brewfile.txt    # what's drifted
+```
+
 ## Updating this repo
 
-After tweaking your live config, sync the changes back:
+For dotfile edits, the symlinks created by `install.sh` mean changes to
+`~/.zshrc`, `~/.gitconfig`, `~/.p10k.zsh`, and the Ghostty config already
+propagate to this repo automatically — just `git add` and commit.
+
+If you didn't symlink, copy them in manually:
 
 ```bash
 cd ~/.dotfiles
-
-# Refresh the Brewfile from currently installed packages
-brew bundle dump --force
-
-# If you ran install.sh, edits to live files already propagate here (symlinks).
-# Otherwise copy them in manually:
 cp ~/.zshrc .zshrc
 cp ~/.p10k.zsh .p10k.zsh
 cp ~/.gitconfig .gitconfig
 cp "$HOME/Library/Application Support/com.mitchellh.ghostty/config" ghostty/config
-
 git add -A && git commit -m "Sync from $(hostname)" && git push
 ```
