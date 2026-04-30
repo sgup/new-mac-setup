@@ -76,6 +76,7 @@ cask "claude"
 cask "ollama"              # local LLMs
 
 # Media + utilities
+cask "backblaze"           # off-site backup (requires subscription to activate)
 cask "iina"                # video player
 cask "appcleaner"          # clean uninstall
 cask "caffeine"            # prevent sleep (handy during long builds)

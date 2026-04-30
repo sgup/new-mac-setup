@@ -80,6 +80,7 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 - **AI** — [ChatGPT](https://openai.com/chatgpt), [Claude](https://claude.com/) desktop, [Perplexity](https://www.perplexity.ai/), [Ollama](https://ollama.com/) (local LLMs).
 - **Media** — [Spotify](https://www.spotify.com/), [IINA](https://iina.io/) (video player).
 - **Utilities** — [AppCleaner](https://freemacsoft.net/appcleaner/), [Caffeine](https://intelliscapesolutions.com/apps/caffeine), [Mac Mouse Fix](https://macmousefix.com/), [MonitorControl](https://monitorcontrol.app/).
+- **Backup** — [Backblaze](https://www.backblaze.com/) (sign in with your account to activate the subscription).
 - **Network / dev** — [Tailscale](https://tailscale.com/) (mesh VPN), [ngrok](https://ngrok.com/) (local tunnel).
 
 **Manual installs (no Homebrew package)**
