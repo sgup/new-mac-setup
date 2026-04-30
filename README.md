@@ -70,15 +70,20 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 - `flyctl` for Fly.io deploys, `libpq` for `psql`/`pg_dump`, `zulu@17` JDK for Android.
 
 **Apps (Mac App Store + casks)**
-- **Productivity** — [Things](https://culturedcode.com/things/) (todo), [Bear](https://bear.app/) (notes), [DaisyDisk](https://daisydiskapp.com/) (disk usage), [Wipr](https://kagi.com/orion) (Safari content blocker), [Dark Reader for Safari](https://darkreader.org/), [Perplexity](https://www.perplexity.ai/).
+- **Security** — [1Password](https://1password.com/).
+- **Productivity** — [Things](https://culturedcode.com/things/) (todo), [Bear](https://bear.app/) (notes), [DaisyDisk](https://daisydiskapp.com/) (disk usage), [Wipr](https://kagi.com/orion) (Safari content blocker), [Dark Reader for Safari](https://darkreader.org/).
 - **Apple suite** — Keynote, Numbers, Pages, iMovie, GarageBand, Final Cut Pro, Xcode.
-- **Communication** — [Signal](https://signal.org/), [Mimestream](https://mimestream.com/) (native Gmail client).
-- **Browsers** — [Helium](https://helium.computer/) (Chromium, privacy-focused).
-- **Editor** — [Zed](https://zed.dev/) (used by `EDITOR`/`VISUAL` in `.zshrc`).
-- **Media** — [Spotify](https://www.spotify.com/).
+- **Communication** — [Signal](https://signal.org/), [WhatsApp](https://www.whatsapp.com/), [Discord](https://discord.com/), [Zoom](https://zoom.us/), [Mimestream](https://mimestream.com/) (native Gmail client).
+- **Browsers** — [Helium](https://helium.computer/) (primary, Chromium privacy-focused), [Google Chrome](https://www.google.com/chrome/) (backup, web dev).
+- **Editor + terminal** — [Zed](https://zed.dev/) (`EDITOR`/`VISUAL`), [Ghostty](https://ghostty.org/) (terminal — config in this repo).
+- **Dev** — [Docker](https://www.docker.com/), [Figma](https://www.figma.com/), [TablePlus](https://tableplus.com/) (Postgres GUI).
+- **AI** — [ChatGPT](https://openai.com/chatgpt), [Claude](https://claude.com/) desktop, [Perplexity](https://www.perplexity.ai/), [Ollama](https://ollama.com/) (local LLMs).
+- **Media** — [Spotify](https://www.spotify.com/), [IINA](https://iina.io/) (video player).
+- **Utilities** — [AppCleaner](https://freemacsoft.net/appcleaner/), [Caffeine](https://intelliscapesolutions.com/apps/caffeine), [Mac Mouse Fix](https://macmousefix.com/), [MonitorControl](https://monitorcontrol.app/).
 - **Network / dev** — [Tailscale](https://tailscale.com/) (mesh VPN), [ngrok](https://ngrok.com/) (local tunnel).
 
 **Manual installs (no Homebrew package)**
+- [Linear](https://linear.app/) — issue tracker. Download the macOS app from the website.
 - [Astro](https://astro.app/) — App Store Optimization (ASO) tool. Download from the website.
 
 **Mobile / AI tooling (installed by `install.sh`, not Homebrew)**

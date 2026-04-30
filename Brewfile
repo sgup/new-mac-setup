@@ -54,12 +54,33 @@ cask "ngrok"               # local tunnel
 cask "tailscale-app"       # mesh VPN
 cask "zulu@17"             # JDK 17 for Android builds
 
-# Apps
-cask "zed"                 # editor (used by EDITOR/VISUAL in .zshrc)
-cask "helium-browser"      # Chromium-based browser focused on speed + privacy
+# Daily-use apps
+cask "1password"           # password manager
+cask "docker"              # container runtime
+cask "figma"               # design
+cask "ghostty"             # terminal (config in ghostty/config)
+cask "google-chrome"       # backup browser, web dev testing
+cask "helium-browser"      # primary browser — Chromium, privacy-focused
 cask "mimestream"          # native macOS Gmail client
 cask "signal"              # encrypted messaging
 cask "spotify"             # music
+cask "tableplus"           # Postgres / SQLite GUI
+cask "zed"                 # editor (used by EDITOR/VISUAL in .zshrc)
+cask "zoom"                # video calls
+cask "whatsapp"            # messaging
+cask "discord"             # chat
+
+# AI desktop apps
+cask "chatgpt"
+cask "claude"
+cask "ollama"              # local LLMs
+
+# Media + utilities
+cask "iina"                # video player
+cask "appcleaner"          # clean uninstall
+cask "caffeine"            # prevent sleep (handy during long builds)
+cask "mac-mouse-fix"       # smooth scrolling + button remaps
+cask "monitorcontrol"      # brightness/volume for external displays
 
 # ============================================================================
 # Mac App Store
