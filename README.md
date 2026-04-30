@@ -85,7 +85,7 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 
 **Manual installs (no Homebrew package)**
 - [Linear](https://linear.app/) — issue tracker. Download the macOS app from the website.
-- [Astro](https://astro.app/) — App Store Optimization (ASO) tool. Download from the website.
+- [Astro](https://tryastro.app/) — App Store Optimization (ASO) tool. Download from the website.
 
 **Mobile / AI tooling (installed by `install.sh`, not Homebrew)**
 - [Claude Code](https://claude.com/claude-code) — Anthropic's native installer
