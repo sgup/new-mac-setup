@@ -74,6 +74,11 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 - **Apple suite** — Keynote, Numbers, Pages, iMovie, GarageBand, Final Cut Pro, Xcode.
 - **Network / dev** — [Tailscale](https://tailscale.com/) (mesh VPN), [ngrok](https://ngrok.com/) (local tunnel).
 
+**AI dev tooling (installed by `install.sh`, not Homebrew)**
+- [Claude Code](https://claude.com/claude-code) — installed via Anthropic's native installer
+  (`curl -fsSL https://claude.ai/install.sh | bash`). Lives at `~/.local/bin/claude`. Sign in
+  on first launch with `claude`.
+
 ## Brewfile philosophy
 
 The Brewfile is **curated, not auto-dumped**. It captures the dev tools and apps

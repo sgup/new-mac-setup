@@ -29,5 +29,16 @@ link "$REPO_DIR/.p10k.zsh"       "$HOME/.p10k.zsh"
 link "$REPO_DIR/.gitconfig"      "$HOME/.gitconfig"
 link "$REPO_DIR/ghostty/config"  "$GHOSTTY_DIR/config"
 
+# Claude Code — installed via Anthropic's native installer (not Homebrew).
+# Lives at ~/.local/bin/claude → ~/.local/share/claude/versions/<v>.
+echo
+if command -v claude >/dev/null 2>&1; then
+  echo "Claude Code already installed: $(claude --version)"
+else
+  echo "Installing Claude Code …"
+  curl -fsSL https://claude.ai/install.sh | bash
+  echo "  → run 'claude' in a new terminal and sign in"
+fi
+
 echo
 echo "Done. Open a new terminal to load the new shell config."
