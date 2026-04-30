@@ -48,6 +48,7 @@ brew "libpq"          # postgres client + tools (psql, pg_dump)
 # ============================================================================
 # Casks
 # ============================================================================
+cask "android-studio"      # Android SDK + emulator (needed for Expo Android builds)
 cask "font-jetbrains-mono-nerd-font"
 cask "ngrok"               # local tunnel
 cask "tailscale-app"       # mesh VPN

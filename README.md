@@ -74,10 +74,21 @@ After that, open a fresh terminal — the new shell config + theme + tools light
 - **Apple suite** — Keynote, Numbers, Pages, iMovie, GarageBand, Final Cut Pro, Xcode.
 - **Network / dev** — [Tailscale](https://tailscale.com/) (mesh VPN), [ngrok](https://ngrok.com/) (local tunnel).
 
-**AI dev tooling (installed by `install.sh`, not Homebrew)**
-- [Claude Code](https://claude.com/claude-code) — installed via Anthropic's native installer
-  (`curl -fsSL https://claude.ai/install.sh | bash`). Lives at `~/.local/bin/claude`. Sign in
-  on first launch with `claude`.
+**Mobile / AI tooling (installed by `install.sh`, not Homebrew)**
+- [Claude Code](https://claude.com/claude-code) — Anthropic's native installer
+  (`~/.local/bin/claude`). Sign in on first launch with `claude`.
+- [pnpm](https://pnpm.io/) — standalone installer at `$HOME/Library/pnpm` (matches
+  `PNPM_HOME` in `.zshrc`).
+- [EAS CLI](https://docs.expo.dev/eas/) — installed via `npm i -g` into mise's
+  active node (so `eas build/submit/update` works in any fresh shell).
+- Run `npx expo-doctor` inside any Expo app to check SDK/dependency drift.
+
+**Android setup (post-install)**
+
+After `brew bundle install` brings in Android Studio, open it once and let it
+download the SDK + a system image, then verify in `.zshrc` that `ANDROID_HOME`
+points at `~/Library/Android/sdk` (it does by default). `JAVA_HOME` for the JDK
+is also pre-wired in `.zshrc` to the Zulu 17 cask install.
 
 ## Brewfile philosophy
 

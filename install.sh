@@ -40,5 +40,26 @@ else
   echo "  → run 'claude' in a new terminal and sign in"
 fi
 
+# pnpm — standalone installer (matches PNPM_HOME=$HOME/Library/pnpm in .zshrc).
+echo
+if [[ -x "$HOME/Library/pnpm/pnpm" ]]; then
+  echo "pnpm already installed: $("$HOME/Library/pnpm/pnpm" --version)"
+else
+  echo "Installing pnpm …"
+  curl -fsSL https://get.pnpm.io/install.sh | sh -
+fi
+
+# EAS CLI — install into mise's node so `eas build/submit/update` works in
+# fresh shells. Requires `mise use --global node@22` to have run already.
+echo
+if command -v mise >/dev/null 2>&1 && mise exec node@22 -- which eas >/dev/null 2>&1; then
+  echo "eas-cli already installed: $(mise exec node@22 -- eas --version | head -1)"
+elif command -v mise >/dev/null 2>&1; then
+  echo "Installing eas-cli into mise's node …"
+  mise exec node@22 -- npm install -g eas-cli
+else
+  echo "⚠️  Skipping eas-cli — install mise + node first, then re-run."
+fi
+
 echo
 echo "Done. Open a new terminal to load the new shell config."
