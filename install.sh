@@ -29,6 +29,13 @@ link "$REPO_DIR/.p10k.zsh"       "$HOME/.p10k.zsh"
 link "$REPO_DIR/.gitconfig"      "$HOME/.gitconfig"
 link "$REPO_DIR/ghostty/config"  "$GHOSTTY_DIR/config"
 
+# Agent context. AGENTS.md holds the shared rules (branch discipline, secrets)
+# read by every coding agent: Codex reads ~/.codex/AGENTS.md directly, and
+# CLAUDE.md pulls it in via `@~/.dotfiles/AGENTS.md` for Claude Code (whose
+# global also carries the Claude-only model-routing notes).
+link "$REPO_DIR/AGENTS.md"        "$HOME/.codex/AGENTS.md"
+link "$REPO_DIR/CLAUDE.md"        "$HOME/.claude/CLAUDE.md"
+
 # Claude Code — installed via Anthropic's native installer (not Homebrew).
 # Lives at ~/.local/bin/claude → ~/.local/share/claude/versions/<v>.
 echo
