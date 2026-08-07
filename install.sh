@@ -76,6 +76,14 @@ if [[ -x "$PNPM_DIR/pnpm" ]]; then
 else
   echo "Installing pnpm …"
   curl -fsSL https://get.pnpm.io/install.sh | sh -
+  # The installer appends its own PNPM_HOME block to the shell rc. By this
+  # point that rc is a SYMLINK into this repo, so the append lands in tracked
+  # source and dirties the working tree on every run — and it lands after the
+  # zoxide block, which is documented as needing to stay last. Our .zshrc
+  # already exports PNPM_HOME and both PATH candidates, so drop the block.
+  if [[ -f "$HOME/.zshrc" ]]; then
+    perl -0pi -e 's/\n?# pnpm\n.*?\n# pnpm end\n//s' "$HOME/.zshrc"
+  fi
 fi
 
 # EAS CLI — install into mise's node so `eas build/submit/update` works in
