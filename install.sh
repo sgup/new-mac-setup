@@ -71,8 +71,13 @@ fi
 # the matching one: ~/Library/pnpm on macOS, ~/.local/share/pnpm on Linux.
 if [[ "$OS" == "Linux" ]]; then PNPM_DIR="$HOME/.local/share/pnpm"; else PNPM_DIR="$HOME/Library/pnpm"; fi
 echo
-if [[ -x "$PNPM_DIR/pnpm" ]]; then
-  echo "pnpm already installed: $("$PNPM_DIR/pnpm" --version)"
+# Check both layouts: pnpm v11 ships $PNPM_HOME/bin/pnpm, older builds put it
+# directly in $PNPM_HOME. Probing only one re-runs the installer every time.
+PNPM_BIN=""
+[[ -x "$PNPM_DIR/bin/pnpm" ]] && PNPM_BIN="$PNPM_DIR/bin/pnpm"
+[[ -z "$PNPM_BIN" && -x "$PNPM_DIR/pnpm" ]] && PNPM_BIN="$PNPM_DIR/pnpm"
+if [[ -n "$PNPM_BIN" ]]; then
+  echo "pnpm already installed: $("$PNPM_BIN" --version)"
 else
   echo "Installing pnpm …"
   curl -fsSL https://get.pnpm.io/install.sh | sh -
@@ -81,8 +86,16 @@ else
   # source and dirties the working tree on every run — and it lands after the
   # zoxide block, which is documented as needing to stay last. Our .zshrc
   # already exports PNPM_HOME and both PATH candidates, so drop the block.
+  # NB: perl -i writes a temp file and renames it, which would REPLACE the
+  # symlink with a regular file and strand the appended block in the repo.
+  # Redirect instead — `>` follows the symlink and truncates its target, so
+  # the link survives and the repo copy is what actually gets cleaned.
   if [[ -f "$HOME/.zshrc" ]]; then
-    perl -0pi -e 's/\n?# pnpm\n.*?\n# pnpm end\n//s' "$HOME/.zshrc"
+    _tmp="$(mktemp)"
+    if perl -0pe 's/\n?# pnpm\n.*?\n# pnpm end\n//s' "$HOME/.zshrc" > "$_tmp"; then
+      cat "$_tmp" > "$HOME/.zshrc"
+    fi
+    rm -f "$_tmp"
   fi
 fi
 
