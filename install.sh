@@ -64,6 +64,14 @@ for _rule in "$REPO_DIR"/claude/rules/*.md; do
   link "$_rule" "$HOME/.claude/rules/$(basename "$_rule")"
 done
 
+# Claude Code agent config: marketplaces, enabled plugins, skill overrides.
+# Separate script because `enabledPlugins` in settings.json is inert on its
+# own — Claude Code does not install from it, so the plugins must be installed
+# explicitly or the machine looks configured while having none.
+echo
+echo "Applying Claude agent config …"
+"$REPO_DIR/claude/sync-plugins.sh"
+
 # Claude Code — installed via Anthropic's native installer (not Homebrew).
 # Lives at ~/.local/bin/claude → ~/.local/share/claude/versions/<v>.
 echo

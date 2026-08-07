@@ -28,6 +28,20 @@ brew bundle install
 
 After that, open a fresh terminal — the new shell config + theme + tools light up immediately.
 
+## Claude Code plugins and skills
+
+`enabledPlugins` in `settings.json` is **inert on its own** — Claude Code does not
+install from it, so a machine can look correctly configured and have no plugins at
+all. `claude/sync-plugins.sh` closes that gap: it merges the tracked fragment,
+registers the marketplaces, and installs everything marked enabled. `install.sh`
+runs it, so `superpowers` and friends arrive on a fresh machine without manual steps.
+
+Skills are a **separate mechanism** from plugins. The `~/.claude/skills/*` entries
+are symlinks into `~/.agents/skills/`, installed by an external skill manager that
+pins each one in `claude/skill-lock.json`. That manifest is tracked for provenance,
+but the ~8 MB of third-party skill content is not — copy `~/.agents/` across when
+setting up a new machine, or reinstall from the lock with the manager that wrote it.
+
 ## Linux dev boxes
 
 For an always-on Ubuntu box (a VPS you drive over SSH/mosh from the Mac), one command
@@ -61,6 +75,9 @@ nothing on Linux.
 | [`AGENTS.md`](AGENTS.md) | Shared context for every coding agent (branch discipline, secrets). Symlinked to `~/.codex/AGENTS.md`; Claude imports it via `@~/.dotfiles/AGENTS.md`. |
 | [`CLAUDE.md`](CLAUDE.md) | Claude Code global instructions (imports `AGENTS.md`). Symlinked to `~/.claude/CLAUDE.md`. |
 | [`claude/rules/`](claude/rules) | Claude Code rule files — model routing, Context7 doc lookups. Each is symlinked into `~/.claude/rules/`. |
+| [`claude/settings.plugins.json`](claude/settings.plugins.json) | Marketplaces, enabled plugins, skill overrides. **Merged** into `~/.claude/settings.json` so machine-specific keys survive. |
+| [`claude/sync-plugins.sh`](claude/sync-plugins.sh) | Applies that fragment and installs the enabled plugins. Run by `install.sh`. |
+| [`claude/skill-lock.json`](claude/skill-lock.json) | Manifest of the `~/.agents/skills` set (source repo + pinned hash per skill). Reference only — not consumed by `install.sh`. |
 | [`install.sh`](install.sh) | Symlinks every dotfile from this repo into the right home location. |
 
 ## Notable choices
