@@ -28,6 +28,26 @@ brew bundle install
 
 After that, open a fresh terminal — the new shell config + theme + tools light up immediately.
 
+## Linux dev boxes
+
+For an always-on Ubuntu box (a VPS you drive over SSH/mosh from the Mac), one command
+installs the same shell — p10k, atuin, zoxide, fzf, eza, mise, the aliases and functions:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/sgup/new-mac-setup/main/linux/provision.sh | bash
+```
+
+It installs the portable half of the Brewfile via apt, clones this repo to `~/.dotfiles`,
+and hands off to `./install.sh`, which links `linux/.zshrc` instead of `.zshrc` when it
+detects Linux.
+
+The two shell configs are kept as separate files rather than one file full of OS guards.
+Every place they diverge is marked `LINUX` in `linux/.zshrc` — editor (`nvim`, no Zed),
+zsh plugin paths (`/usr/share`, not `$(brew --prefix)/share`), `PNPM_HOME`, and the fzf
+keybinding location. Skipped entirely: Ghostty (the terminal lives on the client),
+`JAVA_HOME`/`ANDROID_HOME`, and the mobile toolchain — anything needing Xcode can do
+nothing on Linux.
+
 ## What's in here
 
 | File | Purpose |
