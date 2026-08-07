@@ -1,0 +1,929 @@
+{
+  "version": 3,
+  "skills": {
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "343db72180d05814949fef7d46be96b5c6ee86b3",
+      "installedAt": "2026-06-03T03:25:49.616Z",
+      "updatedAt": "2026-06-03T03:25:49.616Z"
+    },
+    "vercel-react-native-skills": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-native-skills/SKILL.md",
+      "skillFolderHash": "8b4c6a51914e2111ab6f4f00cb81778652aa241d",
+      "installedAt": "2026-06-03T03:25:49.617Z",
+      "updatedAt": "2026-06-03T03:25:49.617Z"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "installedAt": "2026-06-03T03:25:49.617Z",
+      "updatedAt": "2026-06-03T03:25:49.617Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-06-03T03:25:52.605Z",
+      "updatedAt": "2026-06-03T03:25:52.605Z"
+    },
+    "improve": {
+      "source": "shadcn/improve",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/shadcn/improve.git",
+      "skillPath": "skills/improve/SKILL.md",
+      "skillFolderHash": "7d77d76815e6deb704427f17f6e393f55e3cb6da",
+      "installedAt": "2026-06-11T04:46:25.665Z",
+      "updatedAt": "2026-06-29T12:37:25.537Z"
+    },
+    "accessorysetupkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/accessorysetupkit/SKILL.md",
+      "skillFolderHash": "c57dd63736812c2ae9864e5bad606a461daf3356",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.655Z",
+      "updatedAt": "2026-07-24T07:31:04.655Z"
+    },
+    "activitykit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/activitykit/SKILL.md",
+      "skillFolderHash": "aa06e4d68e60cedb6644bb1662197e4657451b20",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.656Z",
+      "updatedAt": "2026-07-24T07:31:04.656Z"
+    },
+    "adattributionkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/adattributionkit/SKILL.md",
+      "skillFolderHash": "be2cf320d6807c42ffb9f1e41bd93434b94b516a",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.656Z",
+      "updatedAt": "2026-07-24T07:31:04.656Z"
+    },
+    "alarmkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/alarmkit/SKILL.md",
+      "skillFolderHash": "32b98a359c1064790caafc7237c27d923b83acd6",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.657Z",
+      "updatedAt": "2026-07-24T07:31:04.657Z"
+    },
+    "app-clips": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/app-clips/SKILL.md",
+      "skillFolderHash": "ad63164133d6c66740b11753ae6fa54427e66a09",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.657Z",
+      "updatedAt": "2026-07-24T07:31:04.657Z"
+    },
+    "app-intents": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/app-intents/SKILL.md",
+      "skillFolderHash": "d12e06ba1618d4674830384e821f2076d404983a",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.658Z",
+      "updatedAt": "2026-07-24T07:31:04.658Z"
+    },
+    "app-store-optimization": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/app-store-optimization/SKILL.md",
+      "skillFolderHash": "e36c2d692aa058888832081c349d9c0d9514143c",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.658Z",
+      "updatedAt": "2026-07-24T07:31:04.658Z"
+    },
+    "app-store-review": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/app-store-review/SKILL.md",
+      "skillFolderHash": "44c89c575691c1b0e221e57982ab83d98068b59a",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.658Z",
+      "updatedAt": "2026-07-24T07:31:04.658Z"
+    },
+    "apple-on-device-ai": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/apple-on-device-ai/SKILL.md",
+      "skillFolderHash": "fc374c8dbf52ebe471b9b9c3844473910a1b9500",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.659Z",
+      "updatedAt": "2026-07-24T07:31:04.659Z"
+    },
+    "appmigrationkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/appmigrationkit/SKILL.md",
+      "skillFolderHash": "69ea75e403af2fdac45bbd55e0fb4f0c4184f9b4",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.659Z",
+      "updatedAt": "2026-07-24T07:31:04.659Z"
+    },
+    "audioaccessorykit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/audioaccessorykit/SKILL.md",
+      "skillFolderHash": "c6b0cca6f89d11ae9948a3e724f9c8cc91979ff6",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.660Z",
+      "updatedAt": "2026-07-24T07:31:04.660Z"
+    },
+    "authentication": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/authentication/SKILL.md",
+      "skillFolderHash": "770b889f9df43ea0073f82af77e1517abadfda86",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.660Z",
+      "updatedAt": "2026-07-24T07:31:04.660Z"
+    },
+    "avkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/avkit/SKILL.md",
+      "skillFolderHash": "e2d09333f9778187517ce7a51be6d69d449d15a9",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.660Z",
+      "updatedAt": "2026-07-24T07:31:04.660Z"
+    },
+    "background-processing": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/background-processing/SKILL.md",
+      "skillFolderHash": "19fa368b7682a422cc3787da66f2f823829d8378",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.661Z",
+      "updatedAt": "2026-07-24T07:31:04.661Z"
+    },
+    "browserenginekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/browserenginekit/SKILL.md",
+      "skillFolderHash": "0ddd22378b154b9e15e2766f2ac66e881f714b00",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.661Z",
+      "updatedAt": "2026-07-24T07:31:04.661Z"
+    },
+    "callkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/callkit/SKILL.md",
+      "skillFolderHash": "ffd1606ce9275dd29ad9b011d183bc7e7eb9a1b0",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.661Z",
+      "updatedAt": "2026-07-24T07:31:04.661Z"
+    },
+    "carplay": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/carplay/SKILL.md",
+      "skillFolderHash": "a7cbc9eb0baa168309ec245285cd529dedcf4c2c",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.662Z",
+      "updatedAt": "2026-07-24T07:31:04.662Z"
+    },
+    "cloudkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/cloudkit/SKILL.md",
+      "skillFolderHash": "320c0e9f8f96efd6b645b2765459dd2fded5a37f",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.662Z",
+      "updatedAt": "2026-07-24T07:31:04.662Z"
+    },
+    "contacts-framework": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/contacts-framework/SKILL.md",
+      "skillFolderHash": "ee31aa49a27d2c70966c3a3ea64758b902562899",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.662Z",
+      "updatedAt": "2026-07-24T07:31:04.662Z"
+    },
+    "core-bluetooth": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/core-bluetooth/SKILL.md",
+      "skillFolderHash": "7b26b3df267e8caadbf249861f99d2f6474205d3",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.662Z",
+      "updatedAt": "2026-07-24T07:31:04.662Z"
+    },
+    "core-data": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/core-data/SKILL.md",
+      "skillFolderHash": "4b0861ada9f768b0dcb6902738fee0661cc1b519",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.663Z",
+      "updatedAt": "2026-07-24T07:31:04.663Z"
+    },
+    "core-motion": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/core-motion/SKILL.md",
+      "skillFolderHash": "ce8fe54e57c06f7b902ec369851c3dd6d80e5676",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.663Z",
+      "updatedAt": "2026-07-24T07:31:04.663Z"
+    },
+    "core-nfc": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/core-nfc/SKILL.md",
+      "skillFolderHash": "64a98eac8e4f82e2d71bc4ecbcc9ed35116986c1",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.663Z",
+      "updatedAt": "2026-07-24T07:31:04.663Z"
+    },
+    "coreml": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/coreml/SKILL.md",
+      "skillFolderHash": "41597166b3b135da70349493588eb878c1282100",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.663Z",
+      "updatedAt": "2026-07-24T07:31:04.663Z"
+    },
+    "cryptokit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/cryptokit/SKILL.md",
+      "skillFolderHash": "cf165cef0c77c950f6fc0d6284e460ce774e27c0",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.664Z",
+      "updatedAt": "2026-07-24T07:31:04.664Z"
+    },
+    "cryptotokenkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/cryptotokenkit/SKILL.md",
+      "skillFolderHash": "e1b78f6cce4b82510603465ef465e9bf5c1ce250",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.664Z",
+      "updatedAt": "2026-07-24T07:31:04.664Z"
+    },
+    "debugging-instruments": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/debugging-instruments/SKILL.md",
+      "skillFolderHash": "158ae018197639209fb73f537f0adaaecc6befa3",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.664Z",
+      "updatedAt": "2026-07-24T07:31:04.664Z"
+    },
+    "device-integrity": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/device-integrity/SKILL.md",
+      "skillFolderHash": "8cc4ec026d78ebb0fbe8d09626307f684ce5d7ea",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.664Z",
+      "updatedAt": "2026-07-24T07:31:04.664Z"
+    },
+    "dockkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/dockkit/SKILL.md",
+      "skillFolderHash": "1ed0bc261ebb502f23c077fbeb26187548ccf49c",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.665Z",
+      "updatedAt": "2026-07-24T07:31:04.665Z"
+    },
+    "energykit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/energykit/SKILL.md",
+      "skillFolderHash": "d93382e0650ec312aa064752466bcb157ebc1943",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.665Z",
+      "updatedAt": "2026-07-24T07:31:04.665Z"
+    },
+    "eventkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/eventkit/SKILL.md",
+      "skillFolderHash": "e777d3cf747e8f543f3abe8d7f877489bff9d7c2",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.665Z",
+      "updatedAt": "2026-07-24T07:31:04.665Z"
+    },
+    "financekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/financekit/SKILL.md",
+      "skillFolderHash": "743894cc0d64af089a0bcae06e0c6c5a033e15d7",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.666Z",
+      "updatedAt": "2026-07-24T07:31:04.666Z"
+    },
+    "focus-engine": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/focus-engine/SKILL.md",
+      "skillFolderHash": "e7295e9de7c8256ca89c0d0df01a29204af5b5d1",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.666Z",
+      "updatedAt": "2026-07-24T07:31:04.666Z"
+    },
+    "gamekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/gamekit/SKILL.md",
+      "skillFolderHash": "2710ee7d81955e97a673452d934824a366f8f1d1",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.666Z",
+      "updatedAt": "2026-07-24T07:31:04.666Z"
+    },
+    "healthkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/healthkit/SKILL.md",
+      "skillFolderHash": "183445064a3a5c7e7eea5320fa1436e1e2ae6577",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.667Z",
+      "updatedAt": "2026-07-24T07:31:04.667Z"
+    },
+    "homekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/homekit/SKILL.md",
+      "skillFolderHash": "b40b5de93b4d311b378171977b11f12bb7ab886a",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.667Z",
+      "updatedAt": "2026-07-24T07:31:04.667Z"
+    },
+    "ios-accessibility": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/ios-accessibility/SKILL.md",
+      "skillFolderHash": "55328ae96950f0c386a21d29a539911c16c11207",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.667Z",
+      "updatedAt": "2026-07-24T07:31:04.667Z"
+    },
+    "ios-ettrace-performance": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/ios-ettrace-performance/SKILL.md",
+      "skillFolderHash": "192e86ace2f9eb3af68ee44ea12dcb0eb8a3d301",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.667Z",
+      "updatedAt": "2026-07-24T07:31:04.667Z"
+    },
+    "ios-localization": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/ios-localization/SKILL.md",
+      "skillFolderHash": "fb8713f856142cecef9806224cf5038b2e3c9922",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.667Z",
+      "updatedAt": "2026-07-24T07:31:04.667Z"
+    },
+    "ios-memgraph-analysis": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/ios-memgraph-analysis/SKILL.md",
+      "skillFolderHash": "33a1e899127bbfd92ce48a772db4f31c69870630",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.668Z",
+      "updatedAt": "2026-07-24T07:31:04.668Z"
+    },
+    "ios-networking": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/ios-networking/SKILL.md",
+      "skillFolderHash": "bf92fbf0f7aa28ec53ab6a2adc0dfc3d5c68f9f2",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.668Z",
+      "updatedAt": "2026-07-24T07:31:04.668Z"
+    },
+    "ios-simulator": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/ios-simulator/SKILL.md",
+      "skillFolderHash": "b19b5072bfbf35e692dd48f10fcd6ecdae57d653",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.668Z",
+      "updatedAt": "2026-07-24T07:31:04.668Z"
+    },
+    "mapkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/mapkit/SKILL.md",
+      "skillFolderHash": "00fe6b1b055d956e2eec7f29703a038377919502",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.668Z",
+      "updatedAt": "2026-07-24T07:31:04.668Z"
+    },
+    "metrickit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/metrickit/SKILL.md",
+      "skillFolderHash": "a368e6b0297bb91c2e9e25f7b049b8ea355f1b83",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.669Z",
+      "updatedAt": "2026-07-24T07:31:04.669Z"
+    },
+    "musickit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/musickit/SKILL.md",
+      "skillFolderHash": "ed32b1fbcc2073f3732afea6cc3c129e9a70ccae",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.669Z",
+      "updatedAt": "2026-07-24T07:31:04.669Z"
+    },
+    "natural-language": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/natural-language/SKILL.md",
+      "skillFolderHash": "99a150939631c7d660735ed849fc5c03fe3497fd",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.669Z",
+      "updatedAt": "2026-07-24T07:31:04.669Z"
+    },
+    "paperkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/paperkit/SKILL.md",
+      "skillFolderHash": "ba107052c5c16d434d28315772ddf754f78261fa",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.669Z",
+      "updatedAt": "2026-07-24T07:31:04.669Z"
+    },
+    "passkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/passkit/SKILL.md",
+      "skillFolderHash": "ad09e78b3c669911e2085148246378c617ac5914",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.670Z",
+      "updatedAt": "2026-07-24T07:31:04.670Z"
+    },
+    "pdfkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/pdfkit/SKILL.md",
+      "skillFolderHash": "129376a495538c8be0623fec4759c1d72ff09f70",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.670Z",
+      "updatedAt": "2026-07-24T07:31:04.670Z"
+    },
+    "pencilkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/pencilkit/SKILL.md",
+      "skillFolderHash": "18d849c97c68476a9aeb7694e43bc1ae7965ec44",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.670Z",
+      "updatedAt": "2026-07-24T07:31:04.670Z"
+    },
+    "permissionkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/permissionkit/SKILL.md",
+      "skillFolderHash": "1644c25aa03d1f7e08a920c2c032ff293e01cffd",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.670Z",
+      "updatedAt": "2026-07-24T07:31:04.670Z"
+    },
+    "photokit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/photokit/SKILL.md",
+      "skillFolderHash": "54cf58cf709f61a3056f9302433a498801e6902f",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.671Z",
+      "updatedAt": "2026-07-24T07:31:04.671Z"
+    },
+    "push-notifications": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/push-notifications/SKILL.md",
+      "skillFolderHash": "bc99146663e04fd7e3a3ae8fccf9e5cd839e666e",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.671Z",
+      "updatedAt": "2026-07-24T07:31:04.671Z"
+    },
+    "realitykit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/realitykit/SKILL.md",
+      "skillFolderHash": "d96d7be1af7580ba29c052e617176949619e1209",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.671Z",
+      "updatedAt": "2026-07-24T07:31:04.671Z"
+    },
+    "relevancekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/relevancekit/SKILL.md",
+      "skillFolderHash": "d30eeb1d3b73c2f1a135626225803f0aa33abd09",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.671Z",
+      "updatedAt": "2026-07-24T07:31:04.671Z"
+    },
+    "scenekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/scenekit/SKILL.md",
+      "skillFolderHash": "fefded77876a9c81ac2cc6335d3f591f7469db9a",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.671Z",
+      "updatedAt": "2026-07-24T07:31:04.671Z"
+    },
+    "sensorkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/sensorkit/SKILL.md",
+      "skillFolderHash": "260817258dbe77ad88d9d8ac669a57a226fb9d02",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.672Z",
+      "updatedAt": "2026-07-24T07:31:04.672Z"
+    },
+    "shareplay-activities": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/shareplay-activities/SKILL.md",
+      "skillFolderHash": "b150658fb70ff29042472facdb0a7c36c6c6475b",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.672Z",
+      "updatedAt": "2026-07-24T07:31:04.672Z"
+    },
+    "speech-recognition": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/speech-recognition/SKILL.md",
+      "skillFolderHash": "e319f4828245e9c79b29e07b2165036c260ee517",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.672Z",
+      "updatedAt": "2026-07-24T07:31:04.672Z"
+    },
+    "spritekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/spritekit/SKILL.md",
+      "skillFolderHash": "27b6302a5c59ee4bb7249ac403771d6e73c97e52",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.672Z",
+      "updatedAt": "2026-07-24T07:31:04.672Z"
+    },
+    "storekit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/storekit/SKILL.md",
+      "skillFolderHash": "473b4b2acfe02de5b753a37db720f2bd2b8b4316",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.673Z",
+      "updatedAt": "2026-07-24T07:31:04.673Z"
+    },
+    "swift-api-design-guidelines": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-api-design-guidelines/SKILL.md",
+      "skillFolderHash": "a351ef8e9b1893070ed859a493a2eedffe51ab53",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.673Z",
+      "updatedAt": "2026-07-24T07:31:04.673Z"
+    },
+    "swift-architecture": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-architecture/SKILL.md",
+      "skillFolderHash": "87cdd0cdae4458bebbdbf676129ca575db069b59",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.673Z",
+      "updatedAt": "2026-07-24T07:31:04.673Z"
+    },
+    "swift-charts": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-charts/SKILL.md",
+      "skillFolderHash": "3ac97aa6e3043aca7e83b50debd363124e0437d9",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.674Z",
+      "updatedAt": "2026-07-24T07:31:04.674Z"
+    },
+    "swift-codable": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-codable/SKILL.md",
+      "skillFolderHash": "a60790b2dfb56bb688dfbf4ea5fa2faa83d1d746",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.674Z",
+      "updatedAt": "2026-07-24T07:31:04.674Z"
+    },
+    "swift-concurrency": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-concurrency/SKILL.md",
+      "skillFolderHash": "9857388a7c9e10774b33de3466363a8c14139028",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.674Z",
+      "updatedAt": "2026-07-24T07:31:04.674Z"
+    },
+    "swift-formatstyle": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-formatstyle/SKILL.md",
+      "skillFolderHash": "fc1a643d7de454f38e665fd2667cf2ccfcada5e0",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.675Z",
+      "updatedAt": "2026-07-24T07:31:04.675Z"
+    },
+    "swift-language": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-language/SKILL.md",
+      "skillFolderHash": "86ef9173429db99a3f9833728475f358a18a1cd3",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.675Z",
+      "updatedAt": "2026-07-24T07:31:04.675Z"
+    },
+    "swift-security": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-security/SKILL.md",
+      "skillFolderHash": "4b27c0545f02b617bdc229e591e0fae7954c1047",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.675Z",
+      "updatedAt": "2026-07-24T07:31:04.675Z"
+    },
+    "swift-testing": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swift-testing/SKILL.md",
+      "skillFolderHash": "b6c2d3397f3ba627157e57defe57de407ef74649",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.675Z",
+      "updatedAt": "2026-07-24T07:31:04.675Z"
+    },
+    "swiftdata": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftdata/SKILL.md",
+      "skillFolderHash": "98132c229f11823d897e917ec30f5ccf421678a8",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.676Z",
+      "updatedAt": "2026-07-24T07:31:04.676Z"
+    },
+    "swiftlint": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftlint/SKILL.md",
+      "skillFolderHash": "3877926a4df91e9c67b27881c000d0e1461b0a4e",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.676Z",
+      "updatedAt": "2026-07-24T07:31:04.676Z"
+    },
+    "swiftui-animation": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-animation/SKILL.md",
+      "skillFolderHash": "d6cca2a00bffcbf633f4eb528c74edaba059c3f8",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.676Z",
+      "updatedAt": "2026-07-24T07:31:04.676Z"
+    },
+    "swiftui-gestures": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-gestures/SKILL.md",
+      "skillFolderHash": "93ca74c0f22ad40e5c0093afdd4280d78a576cad",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.677Z",
+      "updatedAt": "2026-07-24T07:31:04.677Z"
+    },
+    "swiftui-layout-components": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-layout-components/SKILL.md",
+      "skillFolderHash": "cb815010fc5e694f0044b778d5cf124a84e24296",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.677Z",
+      "updatedAt": "2026-07-24T07:31:04.677Z"
+    },
+    "swiftui-liquid-glass": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-liquid-glass/SKILL.md",
+      "skillFolderHash": "56a2e81bf58b6a625ebfba4749682070180a82fa",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.677Z",
+      "updatedAt": "2026-07-24T07:31:04.677Z"
+    },
+    "swiftui-navigation": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-navigation/SKILL.md",
+      "skillFolderHash": "54b204a79c49837a3a14af284e147206d8e90027",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.677Z",
+      "updatedAt": "2026-07-24T07:31:04.677Z"
+    },
+    "swiftui-patterns": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-patterns/SKILL.md",
+      "skillFolderHash": "6eca830cbb06763940409b88ebb64b08ec41b409",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.678Z",
+      "updatedAt": "2026-07-24T07:31:04.678Z"
+    },
+    "swiftui-performance": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-performance/SKILL.md",
+      "skillFolderHash": "b8694ffbf6acd5dc9809a9c0cb9d7929db1611b9",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.678Z",
+      "updatedAt": "2026-07-24T07:31:04.678Z"
+    },
+    "swiftui-uikit-interop": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-uikit-interop/SKILL.md",
+      "skillFolderHash": "10554182748b4d20f25fb02b1f4e7d5bb8d29909",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.678Z",
+      "updatedAt": "2026-07-24T07:31:04.678Z"
+    },
+    "swiftui-webkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/swiftui-webkit/SKILL.md",
+      "skillFolderHash": "e7608a439e832ec17d15108f8a988e0858fc0729",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.679Z",
+      "updatedAt": "2026-07-24T07:31:04.679Z"
+    },
+    "tabletopkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/tabletopkit/SKILL.md",
+      "skillFolderHash": "a8c32740439caff271c922ea31b96eee20066774",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.679Z",
+      "updatedAt": "2026-07-24T07:31:04.679Z"
+    },
+    "tipkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/tipkit/SKILL.md",
+      "skillFolderHash": "8c1529a595228261279daf124a42600590ae5797",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.679Z",
+      "updatedAt": "2026-07-24T07:31:04.679Z"
+    },
+    "vision-framework": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/vision-framework/SKILL.md",
+      "skillFolderHash": "52288a312745bb66187c0eb54f6d9bb94b7462b7",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.679Z",
+      "updatedAt": "2026-07-24T07:31:04.679Z"
+    },
+    "weatherkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/weatherkit/SKILL.md",
+      "skillFolderHash": "f06b3294a2cf1624ea19c15c0dc6422263aaf0ef",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.680Z",
+      "updatedAt": "2026-07-24T07:31:04.680Z"
+    },
+    "widgetkit": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dpearson2699/swift-ios-skills.git",
+      "skillPath": "skills/widgetkit/SKILL.md",
+      "skillFolderHash": "520b64ba6ff24fae7716f5b5bbef80cbef84dd45",
+      "pluginName": "all-ios-skills",
+      "installedAt": "2026-07-24T07:31:04.680Z",
+      "updatedAt": "2026-07-24T07:31:04.680Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}
