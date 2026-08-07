@@ -53,15 +53,28 @@ for t in mise atuin zoxide; do
 done
 
 echo "### dotfiles"
-if [ -d ~/.dotfiles/.git ]; then
-  git -C ~/.dotfiles pull -q --ff-only 2>/dev/null || echo "  (pull skipped — local changes)"
+# Prefer the clone this script is running from. Otherwise a run of ./linux/
+# provision.sh out of clone A would silently link clone B's files, and a
+# failed fast-forward in B would link stale ones.
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+if [ -x "$SELF_DIR/install.sh" ]; then
+  REPO="$SELF_DIR"
+  echo "  using the clone this script came from: $REPO"
 else
-  git clone -q https://github.com/sgup/new-mac-setup.git ~/.dotfiles
+  REPO="$HOME/.dotfiles"
+  if [ -d "$REPO/.git" ]; then
+    git -C "$REPO" pull -q --ff-only 2>/dev/null || echo "  (pull skipped — local changes)"
+  else
+    git clone -q https://github.com/sgup/new-mac-setup.git "$REPO" || {
+      echo "  FAILED to clone dotfiles — aborting"; exit 1; }
+  fi
 fi
-echo "  $(git -C ~/.dotfiles log --oneline -1 2>&1 | head -1)"
+echo "  $(git -C "$REPO" log --oneline -1 2>&1 | head -1)"
 
 echo "### symlinks (delegated to install.sh)"
-~/.dotfiles/install.sh
+# No `set -e` here, so a failing installer would otherwise fall through to
+# rewriting .zshenv, changing the login shell, and printing "Done".
+"$REPO/install.sh" || { echo "  install.sh FAILED — aborting before touching the shell"; exit 1; }
 
 # PATH must be in .zshenv, not only .zshrc: .zshrc is skipped for
 # non-interactive shells, so `ssh <host> claude ...` would not find ~/.local/bin.

@@ -62,6 +62,12 @@ IFS=$'\x1f' read -r \
   agent_name session_id transcript_path \
   <<< "$parsed"
 
+# session_id is interpolated into cache/marker paths below. It is a UUID in
+# practice, but a value containing ../ would escape ~/.claude/statusline-tags
+# and the async tag writer would truncate whatever it landed on. Keep only
+# characters that can appear in an id.
+session_id="${session_id//[^A-Za-z0-9_-]/}"
+
 [ -z "$cwd" ] && cwd="$PWD"
 
 # --- p10k-derived palette (256-color) ---
