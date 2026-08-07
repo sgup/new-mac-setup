@@ -47,7 +47,8 @@ echo "### mise, atuin, zoxide, pnpm (not packaged, upstream installers)"
 command -v mise   >/dev/null || curl -fsSL https://mise.run | sh >/dev/null 2>&1
 command -v atuin  >/dev/null || curl -fsSL https://setup.atuin.sh | bash >/dev/null 2>&1
 command -v zoxide >/dev/null || curl -fsSL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh >/dev/null 2>&1
-[ -x "$HOME/.local/share/pnpm/pnpm" ] || curl -fsSL https://get.pnpm.io/install.sh | SHELL=bash sh - >/dev/null 2>&1
+[ -x "$HOME/.local/share/pnpm/bin/pnpm" ] || [ -x "$HOME/.local/share/pnpm/pnpm" ] || \
+  curl -fsSL https://get.pnpm.io/install.sh | SHELL=bash sh - >/dev/null 2>&1
 for t in mise atuin zoxide; do
   printf "  %-7s %s\n" "$t" "$(PATH="$HOME/.local/bin:$HOME/.atuin/bin:$PATH" command -v $t || echo MISSING)"
 done

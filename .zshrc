@@ -62,9 +62,11 @@ export PATH="$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools"
 
 # --- pnpm --------------------------------------------------------------------
 export PNPM_HOME="$HOME/Library/pnpm"
+# pnpm moved the binary from $PNPM_HOME to $PNPM_HOME/bin (v11 ships the
+# latter). Add both so an upgrade does not silently drop pnpm off PATH.
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PNPM_HOME:$PATH" ;;
 esac
 
 # --- Bun ---------------------------------------------------------------------

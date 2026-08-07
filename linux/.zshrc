@@ -49,9 +49,11 @@ export PATH="$HOME/.atuin/bin:$PATH"
 
 # LINUX: pnpm lives under XDG, not ~/Library.
 export PNPM_HOME="$HOME/.local/share/pnpm"
+# pnpm moved the binary from $PNPM_HOME to $PNPM_HOME/bin (v11 ships the
+# latter). Add both so either layout resolves; a missing dir on PATH is inert.
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PNPM_HOME:$PATH" ;;
 esac
 
 # --- Languages (mise — replaces nvm + pyenv) ---------------------------------
