@@ -1,0 +1,47 @@
+[
+  {
+    "name": "claude-plugins-official",
+    "repo": "anthropics/claude-plugins-official",
+    "url": null
+  },
+  {
+    "name": "claude-code-plugins",
+    "repo": null,
+    "url": "https://github.com/anthropics/claude-code.git"
+  },
+  {
+    "name": "cc-marketplace",
+    "repo": "kenryu42/cc-marketplace",
+    "url": null
+  },
+  {
+    "name": "superpowers-marketplace",
+    "repo": "obra/superpowers-marketplace",
+    "url": null
+  },
+  {
+    "name": "expo-plugins",
+    "repo": "expo/skills",
+    "url": null
+  },
+  {
+    "name": "cloudflare",
+    "repo": "cloudflare/skills",
+    "url": null
+  },
+  {
+    "name": "RevenueCat",
+    "repo": "RevenueCat/ai-toolkit",
+    "url": null
+  },
+  {
+    "name": "antigravity-cc",
+    "repo": "simplybychris/antigravity-plugin-cc",
+    "url": null
+  },
+  {
+    "name": "openai-codex",
+    "repo": "openai/codex-plugin-cc",
+    "url": null
+  }
+]

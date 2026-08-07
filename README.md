@@ -77,6 +77,7 @@ nothing on Linux.
 | [`claude/rules/`](claude/rules) | Claude Code rule files — model routing, Context7 doc lookups. Each is symlinked into `~/.claude/rules/`. |
 | [`claude/settings.plugins.json`](claude/settings.plugins.json) | Marketplaces, enabled plugins, skill overrides. **Merged** into `~/.claude/settings.json` so machine-specific keys survive. |
 | [`claude/sync-plugins.sh`](claude/sync-plugins.sh) | Applies that fragment and installs the enabled plugins. Run by `install.sh`. |
+| [`claude/marketplaces.json`](claude/marketplaces.json) | Every plugin marketplace, source only. `settings.json` records only hand-added ones, so this is the complete list. |
 | [`claude/skill-lock.json`](claude/skill-lock.json) | Manifest of the `~/.agents/skills` set (source repo + pinned hash per skill). Reference only — not consumed by `install.sh`. |
 | [`install.sh`](install.sh) | Symlinks every dotfile from this repo into the right home location. |
 
