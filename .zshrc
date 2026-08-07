@@ -24,8 +24,10 @@ setopt AUTO_CD AUTO_PUSHD PUSHD_IGNORE_DUPS EXTENDED_GLOB
 
 # --- Terminal integrations ---------------------------------------------------
 # Ghostty (also handles window titles via the `title` shell-integration feature,
-# so no manual precmd hack is needed.)
-if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
+# so no manual precmd hack is needed.) Guard the file existence — some hosts
+# (e.g. cmux.app) set GHOSTTY_RESOURCES_DIR to a path that doesn't ship the
+# integration files.
+if [ -n "${GHOSTTY_RESOURCES_DIR}" ] && [ -r "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration" ]; then
   source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
 fi
 
@@ -81,9 +83,6 @@ export PATH="$HOME/.local/bin:$PATH"
 command -v entire >/dev/null && source <(entire completion zsh)
 
 # --- Tools -------------------------------------------------------------------
-# zoxide replaces `cd` with frecency-ranked smart cd. Original: `\cd` or `builtin cd`.
-eval "$(zoxide init zsh --cmd cd)"
-
 # fzf — Ctrl+T fuzzy file picker, Alt+C fuzzy cd. (Ctrl+R is owned by atuin below.)
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --strip-cwd-prefix --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -106,6 +105,7 @@ else
 fi
 
 alias geocode="bun run ~/Code/utils/geocode.ts"
+alias cc="claude"
 
 # --- Functions ---------------------------------------------------------------
 # mkdir + cd in one
@@ -126,3 +126,22 @@ extract() {
 
 # Open the GitHub PR for the current branch (view, or create)
 ghpr() { gh pr view --web 2>/dev/null || gh pr create --web; }
+
+# Silence zoxide's doctor warning. It misfires inside non-interactive shells
+# (e.g. Claude Code's shell snapshots) that replay the `cd` wrapper but don't
+# re-register __zoxide_hook into chpwd_functions. Tracking still works.
+export _ZO_DOCTOR=0
+
+# --- zoxide (must be LAST) ---------------------------------------------------
+# zoxide's chpwd hook needs to be registered after atuin/fzf/etc., otherwise
+# they wrap precmd/chpwd after zoxide and zoxide warns about it on startup.
+# Replaces `cd` with frecency-ranked smart cd. Original: `\cd` or `builtin cd`.
+eval "$(zoxide init zsh --cmd cd)"
+alias z=cd
+alias zi='cd -i'
+alias ccfable='claude --append-system-prompt-file=$HOME/Code/ai/Fable5.local.md'
+alias cc-fable='claude --name=fable --append-system-prompt-file=$HOME/Code/ai/Fable5.local.md'
+
+
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$PATH"
