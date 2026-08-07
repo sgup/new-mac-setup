@@ -37,12 +37,19 @@ command -v claude >/dev/null 2>&1 || {
   echo "  claude not on PATH — skipping plugin install"; exit 0; }
 
 # --- 2. Register marketplaces -------------------------------------------------
-while read -r repo; do
-  [ -n "$repo" ] || continue
-  claude plugin marketplace add "$repo" >/dev/null 2>&1 \
-    && echo "  marketplace: $repo" \
-    || echo "  marketplace FAILED (may already exist): $repo"
-done < <(jq -r '.extraKnownMarketplaces // {} | to_entries[] | .value.source.repo // empty' "$FRAGMENT")
+# From marketplaces.json, not settings.json: `extraKnownMarketplaces` holds
+# only the ones added by hand. The rest live in the plugin cache's
+# known_marketplaces.json, and omitting them makes their plugins uninstallable
+# (frontend-design@claude-code-plugins failed exactly this way).
+MARKETPLACES="$REPO_DIR/claude/marketplaces.json"
+if [ -f "$MARKETPLACES" ]; then
+  while read -r src; do
+    [ -n "$src" ] || continue
+    claude plugin marketplace add "$src" >/dev/null 2>&1 \
+      && echo "  marketplace: $src" \
+      || echo "  marketplace skipped (already present, or upstream unreachable): $src"
+  done < <(jq -r '.[] | (.repo // .url) // empty' "$MARKETPLACES")
+fi
 
 # --- 3. Install everything marked enabled ------------------------------------
 installed="$(claude plugin list 2>/dev/null || true)"

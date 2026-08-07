@@ -53,6 +53,26 @@ for t in mise atuin zoxide; do
   printf "  %-7s %s\n" "$t" "$(PATH="$HOME/.local/bin:$HOME/.atuin/bin:$PATH" command -v $t || echo MISSING)"
 done
 
+# Marketplace and submodule clones go over SSH, but this box has no GitHub SSH
+# private key (gh authenticates over HTTPS). Without these two the clones fail
+# with "Permission denied (publickey)" or an unknown-host-key error.
+# NB: this cannot go in ~/.gitconfig — that is a symlink into the dotfiles
+# repo, so writing there would modify tracked source and force HTTPS on macOS.
+echo "### git: route SSH GitHub URLs over HTTPS (no SSH key on this box)"
+mkdir -p ~/.ssh ~/.config/git && chmod 700 ~/.ssh
+grep -q "^github.com " ~/.ssh/known_hosts 2>/dev/null || {
+  ssh-keyscan -t rsa,ecdsa,ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null
+  chmod 600 ~/.ssh/known_hosts
+}
+if ! grep -q "insteadOf = git@github.com:" ~/.config/git/config 2>/dev/null; then
+  cat >> ~/.config/git/config <<'EOF'
+[url "https://github.com/"]
+    insteadOf = git@github.com:
+    insteadOf = ssh://git@github.com/
+EOF
+fi
+echo "  known_hosts + url rewrite in place"
+
 echo "### dotfiles"
 # Prefer the clone this script is running from. Otherwise a run of ./linux/
 # provision.sh out of clone A would silently link clone B's files, and a
