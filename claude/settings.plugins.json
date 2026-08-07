@@ -1,37 +1,10 @@
 {
-  "extraKnownMarketplaces": {
-    "antigravity-cc": {
-      "source": {
-        "source": "github",
-        "repo": "simplybychris/antigravity-plugin-cc"
-      }
-    },
-    "cloudflare": {
-      "source": {
-        "source": "github",
-        "repo": "cloudflare/skills"
-      }
-    },
-    "expo-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "expo/skills"
-      }
-    },
-    "openai-codex": {
-      "source": {
-        "source": "github",
-        "repo": "openai/codex-plugin-cc"
-      }
-    },
-    "RevenueCat": {
-      "source": {
-        "source": "github",
-        "repo": "RevenueCat/ai-toolkit"
-      }
-    }
-  },
+  "agentPushNotifEnabled": true,
+  "autoCompactEnabled": true,
+  "autoUpdatesChannel": "latest",
+  "effortLevel": "xhigh",
   "enabledPlugins": {
+    "RevenueCat@RevenueCat": false,
     "agy@antigravity-cc": false,
     "clangd-lsp@claude-plugins-official": false,
     "cloudflare@claude-plugins-official": true,
@@ -48,7 +21,6 @@
     "plugin-dev@claude-plugins-official": false,
     "posthog@claude-plugins-official": false,
     "revenuecat-play-billing@RevenueCat": false,
-    "RevenueCat@RevenueCat": false,
     "stripe@claude-plugins-official": false,
     "supabase@claude-plugins-official": false,
     "superpowers@claude-plugins-official": true,
@@ -56,6 +28,69 @@
     "typescript-lsp@claude-plugins-official": true,
     "upgrading-expo@expo-plugins": false,
     "vercel@claude-plugins-official": false
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "extraKnownMarketplaces": {
+    "RevenueCat": {
+      "source": {
+        "repo": "RevenueCat/ai-toolkit",
+        "source": "github"
+      }
+    },
+    "antigravity-cc": {
+      "source": {
+        "repo": "simplybychris/antigravity-plugin-cc",
+        "source": "github"
+      }
+    },
+    "cloudflare": {
+      "source": {
+        "repo": "cloudflare/skills",
+        "source": "github"
+      }
+    },
+    "expo-plugins": {
+      "source": {
+        "repo": "expo/skills",
+        "source": "github"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "repo": "openai/codex-plugin-cc",
+        "source": "github"
+      }
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(cd:*)",
+      "Bash(curl:*)",
+      "Bash(do echo -n \"  $f: \" ffmpeg -i \"$f\" -af ebur128 -f null -)",
+      "Bash(do echo -n \"$f: \" ffmpeg -i \"$f\" -af ebur128 -f null -)",
+      "Bash(ffmpeg:*)",
+      "Bash(find:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(swift:*)",
+      "Bash(swiftlint:*)",
+      "Bash(wc:*)",
+      "Bash(xcodebuild:*)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "mcp__context7__query-docs",
+      "mcp__context7__resolve-library-id",
+      "mcp__firecrawl__firecrawl_scrape",
+      "mcp__firecrawl__firecrawl_search",
+      "mcp__gemini__consult_gemini",
+      "mcp__plugin_context7_context7__query-docs",
+      "mcp__plugin_context7_context7__resolve-library-id"
+    ],
+    "defaultMode": "auto",
+    "deny": []
   },
   "skillOverrides": {
     "accessorysetupkit": "off",
@@ -108,7 +143,13 @@
     "workers-best-practices": "off",
     "wrangler": "off"
   },
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  }
+  "skipAutoPermissionPrompt": true,
+  "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
+  "statusLine": {
+    "command": "bash ~/.claude/statusline-command.sh",
+    "type": "command"
+  },
+  "theme": "dark-daltonized",
+  "tui": "fullscreen"
 }
