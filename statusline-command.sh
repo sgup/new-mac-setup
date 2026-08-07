@@ -91,7 +91,9 @@ join() {
 # Render a token count as e.g. "87k" (rounded to the nearest thousand).
 to_k() {
   local n="${1%.*}"
-  [ -z "$n" ] && { printf '?'; return; }
+  # $(( )) expands variables and COMMAND-SUBSTITUTES its contents, so a value
+  # arriving from the payload must be proven numeric before it gets there.
+  case "$n" in ''|*[!0-9]*) printf '?'; return ;; esac
   printf '%dk' $(( (n + 500) / 1000 ))
 }
 
@@ -392,6 +394,7 @@ fi
 
 if [ -n "$cost_ms" ]; then
   ms_int="${cost_ms%.*}"
+  case "$ms_int" in ''|*[!0-9]*) ms_int="" ;; esac
   if [ -n "$ms_int" ]; then
     total_sec=$((ms_int / 1000))
     mins=$((total_sec / 60))
@@ -412,7 +415,14 @@ line3=$(join "  " "${l3_parts[@]}")
 ##############################################################################
 l4_parts=()
 
-_fmt_epoch() { date -r "$1" +%H:%M 2>/dev/null || date -d "@$1" +%H:%M 2>/dev/null; }
+# GNU `date -r ARG` means "mtime of file ARG", not "format this epoch", and it
+# SUCCEEDS with the wrong time when a file of that name exists in $PWD - so
+# trying it first and falling back on failure is unsound. Branch on the
+# platform instead. $OSTYPE is a bash builtin, so this costs no fork.
+case "$OSTYPE" in
+  darwin*) _fmt_epoch() { date -r "$1" +%H:%M 2>/dev/null; } ;;
+  *)       _fmt_epoch() { date -d "@$1" +%H:%M 2>/dev/null; } ;;
+esac
 rl_parts=()
 if [ -n "$five_pct" ]; then
   five_fmt=$(printf '%.0f' "$five_pct" 2>/dev/null)
