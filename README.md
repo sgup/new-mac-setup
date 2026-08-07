@@ -59,7 +59,8 @@ nothing on Linux.
 | [`ghostty/config`](ghostty/config) | Ghostty terminal: font, theme, blur, keybindings, quick terminal, command-finish notifications. |
 | [`macos/defaults.sh`](macos/defaults.sh) | macOS system preferences (`defaults write`). |
 | [`AGENTS.md`](AGENTS.md) | Shared context for every coding agent (branch discipline, secrets). Symlinked to `~/.codex/AGENTS.md`; Claude imports it via `@~/.dotfiles/AGENTS.md`. |
-| [`CLAUDE.md`](CLAUDE.md) | Claude Code global instructions (imports `AGENTS.md` + Claude-only model-routing notes). Symlinked to `~/.claude/CLAUDE.md`. |
+| [`CLAUDE.md`](CLAUDE.md) | Claude Code global instructions (imports `AGENTS.md`). Symlinked to `~/.claude/CLAUDE.md`. |
+| [`claude/rules/`](claude/rules) | Claude Code rule files — model routing, Context7 doc lookups. Each is symlinked into `~/.claude/rules/`. |
 | [`install.sh`](install.sh) | Symlinks every dotfile from this repo into the right home location. |
 
 ## Notable choices

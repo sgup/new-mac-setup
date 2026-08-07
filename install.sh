@@ -56,6 +56,14 @@ link "$REPO_DIR/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
 link "$REPO_DIR/AGENTS.md"        "$HOME/.codex/AGENTS.md"
 link "$REPO_DIR/CLAUDE.md"        "$HOME/.claude/CLAUDE.md"
 
+# Claude rule files. Looped rather than listed so a new rule needs no edit
+# here. Only files this repo owns are linked, so unrelated rules already in
+# ~/.claude/rules are left alone.
+for _rule in "$REPO_DIR"/claude/rules/*.md; do
+  [[ -e "$_rule" ]] || continue
+  link "$_rule" "$HOME/.claude/rules/$(basename "$_rule")"
+done
+
 # Claude Code — installed via Anthropic's native installer (not Homebrew).
 # Lives at ~/.local/bin/claude → ~/.local/share/claude/versions/<v>.
 echo
