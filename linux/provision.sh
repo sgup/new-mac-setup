@@ -3,7 +3,7 @@
 # Installs what the Brewfile provides on macOS, then hands off to ../install.sh
 # for the symlinks. Idempotent — safe to re-run.
 #
-#   curl -fsSL https://raw.githubusercontent.com/sgup/new-mac-setup/main/linux/provision.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/sgup/new-mac-setup/master/linux/provision.sh | bash
 #   # or, from a clone:  ./linux/provision.sh
 #
 # Skipped deliberately (no Xcode on Linux, so they can do nothing): cocoapods,

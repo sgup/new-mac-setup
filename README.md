@@ -48,12 +48,15 @@ For an always-on Ubuntu box (a VPS you drive over SSH/mosh from the Mac), one co
 installs the same shell — p10k, atuin, zoxide, fzf, eza, mise, the aliases and functions:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/sgup/new-mac-setup/main/linux/provision.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sgup/new-mac-setup/master/linux/provision.sh | bash
 ```
 
 It installs the portable half of the Brewfile via apt, clones this repo to `~/.dotfiles`,
 and hands off to `./install.sh`, which links `linux/.zshrc` instead of `.zshrc` when it
 detects Linux.
+
+For the complete Hetzner bootstrap, SSH/Tailscale hardening, key pitfalls, swap,
+and tmux/mosh workflow, see [`linux/HETZNER.md`](linux/HETZNER.md).
 
 The two shell configs are kept as separate files rather than one file full of OS guards.
 Every place they diverge is marked `LINUX` in `linux/.zshrc` — editor (`nvim`, no Zed),
@@ -72,6 +75,7 @@ nothing on Linux.
 | [`.gitconfig`](.gitconfig) | Git aliases, user info, [delta](https://github.com/dandavison/delta) as the diff pager. |
 | [`ghostty/config`](ghostty/config) | Ghostty terminal: font, theme, blur, keybindings, quick terminal, command-finish notifications. |
 | [`macos/defaults.sh`](macos/defaults.sh) | macOS system preferences (`defaults write`). |
+| [`linux/HETZNER.md`](linux/HETZNER.md) | Rebuild runbook for the always-on Hetzner development host. |
 | [`AGENTS.md`](AGENTS.md) | Shared context for every coding agent (branch discipline, secrets). Symlinked to `~/.codex/AGENTS.md`; Claude imports it via `@~/.dotfiles/AGENTS.md`. |
 | [`CLAUDE.md`](CLAUDE.md) | Claude Code global instructions (imports `AGENTS.md`). Symlinked to `~/.claude/CLAUDE.md`. |
 | [`claude/rules/`](claude/rules) | Claude Code rule files — model routing, Context7 doc lookups. Each is symlinked into `~/.claude/rules/`. |
