@@ -1,0 +1,75 @@
+#cloud-config
+# Hetzner (or any cloud-init host) bootstrap for a Linux dev box.
+# Paste into the provider's "Cloud config" field. Substitute HOSTNAME and the
+# Tailscale auth key; everything else is generic.
+#
+# Tick your SSH keys in the provider's creation form as well. `- default`
+# below preserves the provider's key injection into root, and runcmd copies
+# those same keys to the non-root user — which is the only reliable way to
+# get in. Seeding from github.com/<user>.keys instead looks equivalent and is
+# not: the keys published there need not be the key your SSH agent offers.
+
+hostname: CHANGE-ME
+package_update: true
+# NOT package_upgrade: it delays runcmd by several minutes behind a full
+# apt upgrade, so Tailscale takes that long to appear. unattended-upgrades
+# below applies the backlog shortly after boot instead.
+
+users:
+  # `- default` is load-bearing. A users: block without it SUPPRESSES the
+  # provider's SSH key injection entirely, which can leave a box with no keys
+  # at all and only the web console as a way in.
+  - default
+  - name: shridhar
+    groups: [sudo]
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+
+ssh_pwauth: false
+
+packages: [git, curl, unzip, ca-certificates, unattended-upgrades]
+
+swap:
+  filename: /swapfile
+  size: 4294967296
+  maxsize: 4294967296
+
+write_files:
+  # Patch automatically, but never reboot unattended: a surprise restart would
+  # kill long-running agent sessions and detach tmux work. Reboot by hand when
+  # /var/run/reboot-required appears.
+  - path: /etc/apt/apt.conf.d/20auto-upgrades
+    content: |
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+      APT::Periodic::AutocleanInterval "7";
+  - path: /etc/apt/apt.conf.d/52unattended-upgrades-local
+    content: |
+      Unattended-Upgrade::Automatic-Reboot "false";
+      Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
+      Unattended-Upgrade::Remove-Unused-Dependencies "true";
+
+runcmd:
+  # Give the non-root user exactly the keys the provider injected into root.
+  - install -d -m 700 -o shridhar -g shridhar /home/shridhar/.ssh
+  - cat /root/.ssh/authorized_keys > /home/shridhar/.ssh/authorized_keys
+  - chown shridhar:shridhar /home/shridhar/.ssh/authorized_keys
+  - chmod 600 /home/shridhar/.ssh/authorized_keys
+
+  # Tailscale. Use a single-use, ephemeral, short-expiry auth key.
+  - curl -fsSL https://tailscale.com/install.sh | sh
+  - tailscale up --hostname=CHANGE-ME --authkey=TAILSCALE_AUTH_KEY_HERE
+
+  # Apply the security backlog the base image ships with (typically ~50
+  # packages including openssh-server and a kernel).
+  - DEBIAN_FRONTEND=noninteractive unattended-upgrades
+
+  # Everything else — toolchain, shell, dotfiles, Claude plugins — is
+  # provision.sh's job. Kept there so this file and that script cannot drift.
+  - su - shridhar -c 'curl -fsSL https://raw.githubusercontent.com/sgup/new-mac-setup/master/linux/provision.sh | bash'
+
+final_message: |
+  Ready. Then, as the non-root user:
+    claude auth login
+    gh auth login          # choose HTTPS
+  A kernel update usually lands in the backlog above; reboot when convenient.
